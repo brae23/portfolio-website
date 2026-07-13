@@ -1,0 +1,589 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout title="Resume | Brendan Rae">
+  <main>
+    <div class="resume-header-bar">
+      <h1>Resume</h1>
+      <div class="action-buttons">
+        <a href="/resume.html" target="_blank" class="action-btn secondary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          Open in browser
+        </a>
+        <a href="/resume.pdf" download="Brendan_Rae_Resume.pdf" class="action-btn primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="dl-icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          Download PDF
+        </a>
+      </div>
+    </div>
+
+    <div class="resume-container">
+
+      <!-- Header / Contact -->
+      <section class="resume-section header-section">
+        <div class="contact-info">
+          <h2>Brendan J. Rae</h2>
+          <p class="title">Senior Software Engineer</p>
+          <div class="meta-grid">
+            <div>
+              <span class="icon">📍</span> Buffalo, NY 14219
+            </div>
+            <div>
+              <span class="icon">📞</span> 412-639-3864
+            </div>
+            <div>
+              <span class="icon">✉️</span>
+              <a href="mailto:rae.brendan23@gmail.com">rae.brendan23@gmail.com</a>
+            </div>
+            <div>
+              <span class="icon">🌐</span>
+              <a href="https://brendanrae.net" target="_blank" rel="noopener noreferrer">brendanrae.net</a>
+            </div>
+            <div>
+              <span class="icon">💻</span>
+              <a href="https://github.com/brae23" target="_blank" rel="noopener noreferrer">github.com/brae23</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Professional Summary -->
+      <section class="resume-section">
+        <h3>Professional Summary</h3>
+        <p class="summary-text">
+          Innovative and results-driven <strong>Senior Software Engineer</strong> with over 5 years of professional
+          experience designing, modernizing, and scaling enterprise applications across cloud and microservices
+          architectures. Proven track record of leading cross-functional offshore engineering teams, driving
+          architectural migrations from monolithic systems to cloud-native environments, and pioneering team-wide
+          Artificial Intelligence (AI) adoption. Expert in full-stack engineering utilizing C#, .NET, TypeScript, and
+          Angular, coupled with a deep foundation in DevOps, continuous integration, automated testing, and secure
+          engineering practices.
+        </p>
+      </section>
+
+      <!-- Technical Skills -->
+      <section class="resume-section">
+        <h3>Technical Skills</h3>
+        <div class="skills-grid">
+          <div class="skills-category">
+            <h4>Languages</h4>
+            <div class="skill-tags">
+              <span>C#</span><span>TypeScript</span><span>JavaScript</span><span>Python</span><span>Rust</span><span>SQL</span>
+            </div>
+          </div>
+          <div class="skills-category">
+            <h4>Frameworks</h4>
+            <div class="skill-tags">
+              <span>.NET 8+</span><span>Angular</span><span>React</span><span>Playwright</span><span>Ionic</span><span>Astro</span><span>Capacitor</span>
+            </div>
+          </div>
+          <div class="skills-category">
+            <h4>DevOps &amp; Cloud</h4>
+            <div class="skill-tags">
+              <span>AWS</span><span>Docker</span><span>Kubernetes</span><span>Codefresh</span><span>GitHub Actions</span><span>Git</span><span>PowerShell</span>
+            </div>
+          </div>
+          <div class="skills-category">
+            <h4>Emerging Tech &amp; AI</h4>
+            <div class="skill-tags">
+              <span>Agentic AI Systems</span><span>Sub-Agent Workflows</span><span>Prompt Engineering</span>
+            </div>
+          </div>
+          <div class="skills-category">
+            <h4>Testing &amp; QA</h4>
+            <div class="skill-tags">
+              <span>UI Automated Testing</span><span>Unit Testing</span><span>Integration Testing</span>
+            </div>
+          </div>
+          <div class="skills-category">
+            <h4>Methodologies</h4>
+            <div class="skill-tags">
+              <span>Agile</span><span>Scrum</span><span>Technical Interviewing</span><span>PR Reviews</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Work Experience -->
+      <section class="resume-section">
+        <h3>Professional Work Experience</h3>
+        <div class="experience-timeline">
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <div class="job-meta">
+                <span class="job-title">Senior Software Engineer, Applications</span>
+                <span class="company">Omnicell &mdash; Cranberry Township, PA</span>
+              </div>
+              <span class="duration">June 2021 – Present</span>
+            </div>
+            <ul class="achievements">
+              <li>Lead a cross-functional offshore team of software engineers in India; spearhead technical onboarding, facilitate complex domain knowledge sharing, author/review technical design documentation, and enforce rigorous code quality via comprehensive Pull Request (PR) reviews.</li>
+              <li>Designed and implemented an internal log analysis tool driven entirely by agentic Artificial Intelligence (AI), reducing manual engineering troubleshooting overhead by greater than 80%.</li>
+              <li>Spearhead team-wide Artificial Intelligence (AI) adoption initiatives; engineered custom environment instructions, developed system skills files, and successfully integrated agentic AI into production codebases and developer tool repositories.</li>
+              <li>Conducted technical demonstrations on leveraging sub-agents within agentic coding environments (Codex), accelerating feature delivery cycles while optimizing and reducing token/credit usage.</li>
+              <li>Architected and executed the modernization of a legacy, monolithic application, successfully decomposing core business logic into decoupled, C# .NET microservices hosted within a managed Kubernetes cluster.</li>
+              <li>Design, engineer, and scale full-stack capabilities for the Central Pharmacy Manager application using C# and Angular, consistently maintaining greater than 80% test coverage across unit, integration, and UI testing layers.</li>
+              <li>Collaborate closely with hiring managers to interview, evaluate, and benchmark technical candidates for engineering roles, designing technical evaluation criteria to ensure high-caliber engineering hires.</li>
+            </ul>
+            <div class="tech-tags">
+              <span>C#</span><span>.NET</span><span>Angular</span><span>TypeScript</span><span>Kubernetes</span><span>Docker</span><span>AWS</span><span>Playwright</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <div class="job-meta">
+                <span class="job-title">Software Engineering Intern</span>
+                <span class="company">Omnicell &mdash; Cranberry Township, PA</span>
+              </div>
+              <span class="duration">June 2020 – Sept 2020</span>
+            </div>
+            <ul class="achievements">
+              <li>Collaborated closely with the DevOps and Release Management teams to design and automate security scanning pipelines using Python, REST APIs, and Azure DevOps / TFS CI/CD pipelines.</li>
+              <li>Actively participated in Scrum ceremonies, breaking down large-scale initiatives into actionable user stories and managing deliverables within a sprint backlog.</li>
+              <li>Mastered enterprise-level version control using Git, seamlessly integrated code across multi-engineer workflows, and incorporated peer feedback through rigorous code reviews.</li>
+            </ul>
+            <div class="tech-tags">
+              <span>Python</span><span>REST APIs</span><span>Azure DevOps</span><span>Git</span><span>CI/CD</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Technical Projects -->
+      <section class="resume-section">
+        <h3>Technical Projects</h3>
+        <div class="experience-timeline">
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <div class="job-meta">
+                <span class="job-title">Portfolio Website Development</span>
+                <span class="company">Side Project &mdash; Astro</span>
+              </div>
+              <span class="duration">Nov 2022 – Present</span>
+            </div>
+            <ul class="achievements">
+              <li>Designed and deployed a highly performant, personal portfolio site using Astro to serve as an external showcase for technical skills, cloud architecture insights, and professional updates.</li>
+            </ul>
+            <div class="tech-tags">
+              <span>Astro</span><span>TypeScript</span><span>HTML5</span><span>CSS3</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section class="resume-section">
+        <h3>Education</h3>
+        <div class="education-item">
+          <div class="education-header">
+            <div class="school-meta">
+              <span class="degree">Bachelor of Science (B.S.) in Cybersecurity</span>
+              <span class="school">Slippery Rock University &mdash; Minor: Professional Japanese</span>
+            </div>
+            <span class="graduation">Graduated May 2021</span>
+          </div>
+          <p class="education-details">Cumulative GPA: 3.65 / 4.0 &nbsp;|&nbsp; Major GPA: 3.65 / 4.0</p>
+        </div>
+      </section>
+
+      <!-- Volunteer & Leadership -->
+      <section class="resume-section">
+        <h3>Volunteer &amp; Leadership Experience</h3>
+        <div class="experience-timeline">
+
+          <div class="timeline-item compact">
+            <div class="timeline-header">
+              <div class="job-meta">
+                <span class="job-title">Volunteer</span>
+                <span class="company">Pittsburgh Food Bank</span>
+              </div>
+              <span class="duration">April 2023 – Present</span>
+            </div>
+            <ul class="achievements">
+              <li>Coordinate logistics to distribute meals to over 100 families monthly across various regional distribution sites.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item compact">
+            <div class="timeline-header">
+              <div class="job-meta">
+                <span class="job-title">Japanese Language Tutor</span>
+                <span class="company">Slippery Rock University</span>
+              </div>
+              <span class="duration">Sept 2019 – May 2021</span>
+            </div>
+            <ul class="achievements">
+              <li>Facilitated language immersion conversation groups and provided tailored academic tutoring to undergraduate students.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item compact">
+            <div class="timeline-header">
+              <div class="job-meta">
+                <span class="job-title">STEM Camp Mentor</span>
+                <span class="company">Slippery Rock University</span>
+              </div>
+              <span class="duration">July 2019</span>
+            </div>
+            <ul class="achievements">
+              <li>Chaperoned and mentored groups of up to 16 elementary students in interactive, hands-on technology exercises.</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+</MainLayout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 3rem 1rem;
+    max-width: 900px;
+    animation: fadeInAnimation ease-out 0.6s;
+  }
+  .resume-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .resume-header-bar h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    margin: 0;
+  }
+  .action-buttons {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+  .action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.25rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s, border-color 0.2s;
+  }
+  .action-btn.primary {
+    background: var(--accent-gradient);
+    color: white;
+    box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+  }
+  .action-btn.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);
+  }
+  .action-btn.primary:hover .dl-icon {
+    transform: translateY(2px);
+  }
+  .dl-icon {
+    transition: transform 0.2s;
+  }
+  .action-btn.secondary {
+    background: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--card-border);
+  }
+  .action-btn.secondary:hover {
+    transform: translateY(-2px);
+    background: var(--secondary-accent);
+    border-color: rgba(99, 102, 241, 0.3);
+  }
+  .resume-container {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 3rem;
+    box-shadow: 0 10px 30px -10px var(--shadow-color);
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  .resume-section {
+    border-bottom: 1px solid var(--card-border);
+    padding-bottom: 2rem;
+  }
+  .resume-section:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .header-section {
+    padding-bottom: 1.5rem;
+  }
+  /* Contact Header */
+  .contact-info h2 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin: 0 0 0.25rem 0;
+  }
+  .contact-info .title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0 0 1.25rem 0;
+  }
+  .meta-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.75rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+  .meta-grid a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .meta-grid a:hover {
+    color: var(--text-color);
+  }
+  .icon {
+    margin-right: 0.35rem;
+  }
+  /* Section headers */
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 1.25rem 0;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  h3::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--card-border);
+  }
+  /* Summary */
+  .summary-text {
+    font-size: 0.975rem;
+    font-weight: 400;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin: 0;
+  }
+  .summary-text strong {
+    color: var(--text-color);
+    font-weight: 700;
+  }
+  /* Skills */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+  .skills-category {
+    background: var(--secondary-accent);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 1rem 1.1rem;
+  }
+  .skills-category h4 {
+    margin: 0 0 0.6rem 0;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  .skill-tags span {
+    font-size: 0.78rem;
+    font-weight: 500;
+    background: var(--card-bg);
+    color: var(--text-color);
+    padding: 0.2rem 0.55rem;
+    border-radius: 6px;
+    border: 1px solid var(--card-border);
+  }
+  /* Experience / Timeline */
+  .experience-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+  }
+  .timeline-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .timeline-item.compact {
+    gap: 0.4rem;
+  }
+  .timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  .job-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+  .job-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-color);
+  }
+  .company {
+    font-size: 0.9rem;
+    font-weight: 500;
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .duration {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    background: var(--secondary-accent);
+    padding: 0.2rem 0.65rem;
+    border-radius: 9999px;
+    border: 1px solid var(--card-border);
+    white-space: nowrap;
+    align-self: flex-start;
+  }
+  .achievements {
+    margin: 0;
+    padding-left: 1.25rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+  .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  .tech-tags span {
+    font-size: 0.76rem;
+    font-weight: 600;
+    background: rgba(99, 102, 241, 0.08);
+    color: rgb(var(--accent));
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    border: 1px solid rgba(99, 102, 241, 0.15);
+  }
+  /* Education */
+  .education-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .school-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+  .degree {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-color);
+  }
+  .school {
+    font-size: 0.9rem;
+    font-weight: 500;
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .graduation {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    background: var(--secondary-accent);
+    padding: 0.2rem 0.65rem;
+    border-radius: 9999px;
+    border: 1px solid var(--card-border);
+    white-space: nowrap;
+    align-self: flex-start;
+  }
+  .education-details {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  @keyframes fadeInAnimation {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @media only screen and (max-width: 640px) {
+    .resume-container {
+      padding: 1.5rem 1.25rem;
+      gap: 2rem;
+    }
+    .timeline-header, .education-header {
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+    .duration, .graduation {
+      align-self: flex-start;
+    }
+    .skills-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media print {
+    :global(html) {
+      background: white !important;
+      background-image: none !important;
+    }
+    :global(body) { padding: 0 !important; max-width: 100% !important; }
+    :global(header) { display: none !important; }
+    .resume-header-bar { display: none !important; }
+    .resume-container {
+      border: none !important;
+      padding: 0 !important;
+      box-shadow: none !important;
+      background: white !important;
+    }
+    .resume-section { border-bottom: 1px solid #ccc !important; }
+    .skills-category, .duration, .graduation {
+      background: none !important;
+      border-color: #ccc !important;
+    }
+  }
+</style>

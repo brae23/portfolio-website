@@ -16,6 +16,13 @@ const { title } = Astro.props;
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <header>
     <NavHeader />
@@ -26,50 +33,94 @@ const { title } = Astro.props;
 
   <style is:global>
     :root {
-      --accent: 102, 159, 255;
-      --accent-light: 204, 230, 255;
-      --accent-dark: 0, 128, 255;
-      color: var(--text-color);
+      --accent: 99, 102, 241;
+      --accent-light: 199, 210, 254;
+      --accent-dark: 67, 56, 202;
+      color-scheme: light dark;
     }
     @media (prefers-color-scheme: dark) {
       :root {
-        --text-color: #fff;
-        --background-color: #13151a;
+        --text-color: #f3f4f6;
+        --text-muted: #9ca3af;
+        --background-color: #0b0f19;
+        --card-bg: rgba(30, 41, 59, 0.4);
+        --card-border: rgba(255, 255, 255, 0.08);
         --accent-gradient: linear-gradient(
-          45deg,
-          rgb(var(--accent)),
-          rgb(var(--accent-light)) 30%,
-          white 60%
+          135deg,
+          #6366f1,
+          #8b5cf6 50%,
+          #ec4899
         );
-        --secondary-accent: #23262d;
+        --secondary-accent: #1e293b;
+        --shadow-color: rgba(0, 0, 0, 0.4);
       }
       html {
-        background: #13151a;
+        background: #0b0f19;
+        background-image: radial-gradient(
+            at 0% 0%,
+            rgba(99, 102, 241, 0.12) 0px,
+            transparent 50%
+          ),
+          radial-gradient(
+            at 100% 100%,
+            rgba(236, 72, 153, 0.08) 0px,
+            transparent 50%
+          );
+        background-attachment: fixed;
       }
     }
     @media (prefers-color-scheme: light) {
       :root {
-        --text-color: black;
-        --background-color: #fff;
+        --text-color: #0f172a;
+        --text-muted: #64748b;
+        --background-color: #f8fafc;
+        --card-bg: rgba(255, 255, 255, 0.7);
+        --card-border: rgba(0, 0, 0, 0.06);
         --accent-gradient: linear-gradient(
-          45deg,
-          rgb(var(--accent)),
-          rgb(var(--accent-dark)) 30%,
-          white 60%
+          135deg,
+          #4f46e5,
+          #7c3aed 50%,
+          #db2777
         );
-        --secondary-accent: #fff;
+        --secondary-accent: #f1f5f9;
+        --shadow-color: rgba(0, 0, 0, 0.05);
       }
       html {
-        background: #fff;
+        background: #f8fafc;
+        background-image: radial-gradient(
+            at 0% 0%,
+            rgba(99, 102, 241, 0.06) 0px,
+            transparent 50%
+          ),
+          radial-gradient(
+            at 100% 100%,
+            rgba(236, 72, 153, 0.05) 0px,
+            transparent 50%
+          );
+        background-attachment: fixed;
       }
     }
     html {
-      font-family: system-ui, sans-serif;
+      font-family: "Inter", system-ui, sans-serif;
+      scroll-behavior: smooth;
+      color: var(--text-color);
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Outfit", sans-serif;
     }
     body {
       margin: auto;
-      width: calc(100% - 0.5rem);
-      max-width: 1300px;
+      width: 100%;
+      max-width: 1200px;
+      padding: 0 1.5rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
       position: relative;
     }
     code {
@@ -87,12 +138,12 @@ const { title } = Astro.props;
       background-image: var(--accent-gradient);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      background-position: 0%;
+      background-size: 200% auto;
+      background-clip: text;
     }
     .no-scroll {
       overflow: hidden;
     }
   </style>
-
 
 </html>

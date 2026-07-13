@@ -3,30 +3,65 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Card from "../components/Card.astro";
 ---
 
-<MainLayout title="Brendan Rae">
+<MainLayout title="Brendan Rae | Software Engineer">
   <main>
-    <h1>Welcome to <span class="name text-gradient">my website!</span></h1>
-    <p class="bio">
-      I am a software engineer with a passion for creating innovative and
-      efficient solutions to complex problems. Check out my about page to learn
-      more about me. Also, feel free to check out my blog or follow my socials
-      to see what I'm up to!
-    </p>
-    <div class="card-container">
-      <Card
-        href="https://github.com/brae23"
-        title="Github"
-        body="My github profile. This is where I house all the code for my projects, personal website, and more!"
-        img_src="/github.svg"
-        img_alt="Github Logo"
-      />
-      <Card
-        href="https://www.linkedin.com/in/brendan-rae-3a3b03179/"
-        title="LinkedIn"
-        body="Connect with me on LinkedIn, where I keep up to date with my professional network"
-        img_src="/linkedin.svg"
-        img_alt="LinkedIn Logo"
-      />
+    <div class="hero-section">
+      <div class="status-badge">
+        <span class="pulse-dot"></span>
+        <span>Available for new opportunities</span>
+      </div>
+      <div class="img-wrapper">
+        <img
+          src="/_DSC2847.webp"
+          alt="Brendan Rae Profile"
+          class="profile-img"
+        />
+      </div>
+      <h1>Hi, I'm <span class="name text-gradient">Brendan Rae</span></h1>
+      <p class="tagline">Software Engineer & Experience Innovator</p>
+      <p class="bio">
+        I'm a <b>Senior Software Engineer</b> passionate about building robust, secure, and highly scalable cloud-native ecosystems. From engineering distributed systems in C# .NET and modern microservices frameworks to deploying cross-platform applications, I bridge the gap between architectural vision and clean execution. Alongside full-stack engineering, I specialize in leading cross-functional engineering teams, modern DevOps pipelines, and driving developer velocity through agentic AI tooling.
+      </p>
+      <div class="cta-container">
+        <a href="/resume" class="cta-button primary">
+          View Resume
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="arrow-icon"
+            ><line x1="5" y1="12" x2="19" y2="12"></line><polyline
+              points="12 5 19 12 12 19"></polyline></svg
+          >
+        </a>
+        <a href="/about" class="cta-button secondary">About Me</a>
+      </div>
+    </div>
+
+    <div class="connect-section">
+      <h2>Connect with me</h2>
+      <div class="card-container">
+        <Card
+          href="https://github.com/brae23"
+          title="Github"
+          body="My github profile. This is where I house all the code for my projects, personal website, and more!"
+          img_src="/github.svg"
+          img_alt="Github Logo"
+        />
+        <Card
+          href="https://www.linkedin.com/in/brendan-rae-3a3b03179/"
+          title="LinkedIn"
+          body="Connect with me on LinkedIn, where I keep up to date with my professional network"
+          img_src="/linkedin.svg"
+          img_alt="LinkedIn Logo"
+        />
+      </div>
     </div>
   </main>
 </MainLayout>
@@ -34,65 +69,185 @@ import Card from "../components/Card.astro";
 <style>
   main {
     margin: auto;
-    padding: 1rem;
-    width: 90%;
-    position: relative;
-    z-index: 10;
+    padding: 3rem 1rem;
+    max-width: 1000px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    animation: fadeInAnimation ease-in 0.4s;
+    gap: 4rem;
+    animation: fadeInAnimation ease-out 0.6s;
+  }
+  .img-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  .img-wrapper img {
+    border-radius: 16px;
+    border: 1px solid var(--card-border);
+    box-shadow: 0 10px 30px -10px var(--shadow-color);
+    max-width: 40%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  .img-wrapper img:hover {
+    transform: scale(1.02);
+  } 
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+  }
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: 1px solid var(--card-border);
+    background: var(--card-bg);
+    margin-bottom: 1.5rem;
+  }
+  .pulse-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #10b981;
+    border-radius: 50%;
+    position: relative;
+  }
+  .pulse-dot::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #10b981;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(2.5);
+      opacity: 0;
+    }
   }
   h1 {
-    font-size: 52px;
-    font-weight: 700;
-    line-height: 1;
-    text-align: left;
-    margin-bottom: 1em;
-    padding: 2rem;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0 0 1rem 0;
+    letter-spacing: -0.04em;
   }
-  .name {
-    background-size: 400%;
+  .tagline {
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    font-weight: 600;
+    margin: 0 0 1.5rem 0;
+    color: var(--text-color);
+    opacity: 0.9;
   }
   .bio {
-    padding: 2rem;
-    font-size: 24px;
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
     font-weight: 300;
     line-height: 1.6;
-    text-align: center;
+    margin: 0 0 2.5rem 0;
+    color: var(--text-muted);
+  }
+  .cta-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.75rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition:
+      transform 0.2s,
+      box-shadow 0.2s,
+      background-color 0.2s,
+      border-color 0.2s;
+  }
+  .cta-button.primary {
+    background: var(--accent-gradient);
+    color: white;
+    box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+  }
+  .cta-button.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);
+  }
+  .cta-button.primary:hover .arrow-icon {
+    transform: translateX(4px);
+  }
+  .arrow-icon {
+    transition: transform 0.2s;
+  }
+  .cta-button.secondary {
+    background: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--card-border);
+  }
+  .cta-button.secondary:hover {
+    transform: translateY(-2px);
+    background: var(--secondary-accent);
+    border-color: rgba(99, 102, 241, 0.3);
+  }
+  .connect-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .connect-section h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0;
   }
   .card-container {
     width: 100%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    gap: 2rem;
+  }
+
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   @media only screen and (max-width: 700px) {
     main {
-      text-align: center;
-    }
-    h1 {
-      font-size: 40px;
-      text-align: center;
+      padding: 2rem 1rem;
+      gap: 3rem;
     }
     .card-container {
       flex-direction: column;
-    }
-    .bio {
-      font-size: 20px;
-      line-height: 1.6;
-      padding: 0;
-    }
-  }
-  @keyframes fadeInAnimation {
-    0% {
-      padding-top: 50px;
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
     }
   }
 </style>
